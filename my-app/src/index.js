@@ -6,9 +6,7 @@ import './index.css';
 class Square extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: null,
-    }
+    this.state = { value: null, }
   }
 
   render() {
@@ -19,6 +17,11 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { Square: Array(9).fill(null), }
+  }
+
   renderSquare(i) {
     return <Square value={i} />;
   }
